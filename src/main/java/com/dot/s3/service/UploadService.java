@@ -42,7 +42,8 @@ public class UploadService {
 
 				Student student = studentListClone.next();
 
-				if (student.getPhoneNumber() == null || student.getPhoneNumber().isEmpty()) {
+				if (student.getPhoneNumber() == null || student.getPhoneNumber().isEmpty()
+						|| student.getFirstName() == null || student.getFirstName().isEmpty()) {
 					mandatoryMissedList.add(student);
 					studentListClone.remove();
 				}
